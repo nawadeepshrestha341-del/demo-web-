@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop | AMRAPALI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef", "on-surface": "#1c1b1b", "tertiary-container": "#43423e",
+                        "on-secondary": "#ffffff", "on-primary-container": "#ff907f", "on-tertiary-fixed-variant": "#474743",
+                        "surface-container-low": "#f6f3f2", "inverse-primary": "#ffb4a8", "surface": "#fcf9f8",
+                        "tertiary": "#2c2c28", "on-secondary-fixed-variant": "#5d4201", "secondary-container": "#fed488",
+                        "on-background": "#1c1b1b", "secondary-fixed": "#ffdea5", "primary-container": "#8b0000",
+                        "tertiary-fixed-dim": "#c9c6c1", "surface-container-lowest": "#ffffff", "surface-container": "#f0eded",
+                        "primary": "#610000", "antique-gold": "#B38B45", "antique-gold-text": "#8A6A2E",
+                        "surface-container-high": "#eae7e7", "charcoal-ink": "#121212", "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#ffdad4", "outline-variant": "#e3beb8", "surface-dim": "#dcd9d9",
+                        "on-primary": "#ffffff", "outline": "#8e706b", "error": "#ba1a1a", "on-tertiary": "#ffffff",
+                        "surface-tint": "#b52619", "tertiary-fixed": "#e5e2dc", "on-tertiary-container": "#b0aea9",
+                        "surface-variant": "#e5e2e1", "silk-cream": "#FDFBF7", "surface-bright": "#fcf9f8",
+                        "on-surface-variant": "#5a403c", "on-error-container": "#93000a", "on-secondary-container": "#785a1a",
+                        "error-container": "#ffdad6", "background": "#fcf9f8", "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1c18", "on-primary-fixed-variant": "#920703", "on-primary-fixed": "#410000",
+                        "primary-fixed-dim": "#ffb4a8", "inverse-surface": "#313030", "secondary-fixed-dim": "#e9c176",
+                        "heritage-red": "#630D16", "secondary": "#775a19", "on-error": "#ffffff"
+                    },
+                    "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                    "spacing": { "container-max": "1440px", "margin-desktop": "80px", "margin-tablet": "40px", "margin-mobile": "20px", "gutter": "24px", "unit": "8px" },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "price-display": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"], "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            },
+            plugins: [
+                function ({ addVariant }) { addVariant('slide-active', ':merge(.slide-active) &'); }
+            ]
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 9999px; background: #610000; cursor: pointer; margin-top: -6px; }
+        input[type="range"] { -webkit-appearance: none; height: 4px; background: #e3beb8; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-silk-cream text-on-surface selection:bg-antique-gold/20 selection:text-heritage-red overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-silk-cream/90 dark:bg-charcoal-ink/90 backdrop-blur-md border-b border-antique-gold/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-unit max-w-container-max mx-auto">
+<a class="text-headline-lg font-headline-lg tracking-widest text-heritage-red dark:text-primary-fixed" href="index.html">AMRAPALI</a>
+<nav aria-label="Primary" class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-heritage-red border-b border-antique-gold pb-1 transition-colors duration-300" href="shop.html">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="about.html">About Us</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="boutiques.html">Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center space-x-2 md:space-x-4 text-heritage-red">
+<button type="button" aria-label="Search" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">search</span>
+</button>
+<button type="button" aria-label="Account" class="hidden sm:flex min-w-[44px] min-h-[44px] items-center justify-center hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">person</span>
+</button>
+<button type="button" aria-label="Wishlist" class="hidden sm:flex min-w-[44px] min-h-[44px] items-center justify-center hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+</button>
+<button type="button" aria-label="Cart, 2 items" class="relative min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+<span aria-hidden="true" class="absolute top-1 right-1 bg-heritage-red text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+<button id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-label="Site navigation">
+<div id="mobile-drawer-backdrop" class="absolute inset-0 bg-charcoal-ink/40"></div>
+<div class="absolute top-0 right-0 h-full w-4/5 max-w-xs bg-silk-cream shadow-xl flex flex-col p-8 overflow-y-auto">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-heritage-red">Menu</span>
+<button id="mobile-menu-close" type="button" aria-label="Close menu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-heritage-red hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+</div>
+<nav aria-label="Mobile" class="flex flex-col space-y-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-heritage-red border-b border-antique-gold pb-1 w-fit" href="shop.html">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="about.html">About Us</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="boutiques.html">Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="contact.html">Contact Us</a>
+</nav>
+</div>
+</div>
+
+<main class="pt-24 pb-16 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+<nav aria-label="Breadcrumb" class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">
+<ol class="flex gap-2">
+<li><a class="hover:text-heritage-red" href="index.html">Home</a></li>
+<li aria-hidden="true">/</li>
+<li class="text-heritage-red" aria-current="page">Shop</li>
+</ol>
+</nav>
+<div class="mb-12" data-reveal="">
+<h1 class="font-display-lg text-display-lg text-heritage-red mb-4">The Royal Collection</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Explore our curated selection of heritage jewelry, where every piece tells a story of ancient Indian craftsmanship reimagined for the modern aesthetic.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12">
+<!-- Filters -->
+<aside aria-label="Filters">
+<fieldset class="mb-10">
+<legend class="font-label-caps text-label-caps text-heritage-red mb-4 border-b border-antique-gold/30 pb-2 w-full">Category</legend>
+<div class="space-y-3">
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="cat-rings" name="category" type="checkbox"/><label class="font-body-md text-body-md" for="cat-rings">Rings</label></div>
+<div class="flex items-center gap-3"><input checked="" class="accent-heritage-red" id="cat-necklaces" name="category" type="checkbox"/><label class="font-body-md text-body-md" for="cat-necklaces">Necklaces</label></div>
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="cat-earrings" name="category" type="checkbox"/><label class="font-body-md text-body-md" for="cat-earrings">Earrings</label></div>
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="cat-bracelets" name="category" type="checkbox"/><label class="font-body-md text-body-md" for="cat-bracelets">Bracelets</label></div>
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="cat-bangles" name="category" type="checkbox"/><label class="font-body-md text-body-md" for="cat-bangles">Bangles</label></div>
+</div>
+</fieldset>
+<fieldset class="mb-10">
+<legend class="font-label-caps text-label-caps text-heritage-red mb-4 border-b border-antique-gold/30 pb-2 w-full">Metal</legend>
+<div class="space-y-3">
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="metal-gold" name="metal" type="radio"/><label class="font-body-md text-body-md" for="metal-gold">18K Yellow Gold</label></div>
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="metal-silver" name="metal" type="radio"/><label class="font-body-md text-body-md" for="metal-silver">Sterling Silver</label></div>
+<div class="flex items-center gap-3"><input class="accent-heritage-red" id="metal-rose" name="metal" type="radio"/><label class="font-body-md text-body-md" for="metal-rose">Rose Gold</label></div>
+</div>
+</fieldset>
+<fieldset class="mb-10">
+<legend class="font-label-caps text-label-caps text-heritage-red mb-4 border-b border-antique-gold/30 pb-2 w-full">Price Range</legend>
+<label class="sr-only" for="price-range">Maximum price</label>
+<input class="w-full" id="price-range" max="15000" min="500" type="range" value="4250"/>
+<div class="flex justify-between font-body-md text-[11px] text-on-surface-variant mt-2">
+<span>$500</span>
+<span>$15,000+</span>
+</div>
+</fieldset>
+<button class="w-full border border-heritage-red text-heritage-red py-3 font-label-caps text-label-caps hover:bg-heritage-red hover:text-silk-cream transition-all uppercase tracking-widest" type="button">Clear Filters</button>
+</aside>
+<!-- Product Grid -->
+<div>
+<div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<span class="absolute top-3 left-3 z-10 bg-antique-gold text-silk-cream text-[10px] px-3 py-1 uppercase tracking-widest">Bestseller</span>
+<img alt="Navratna Emerald Choker, a heritage gold choker with emeralds and kundan work" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIcJCwTFmsxQxpsIK3b-QSwLWmJf1nPrfoGCbONWWpRICI4jaR4Vd2-1iYfukcVqE5gZ5Scagoh7yhORQXfK3TxHXK2Llm9ZRASNqls1yOwrd_e92vmlQPGKAhu47_vXuqtLGERIYhCdviIYtw4ds7G7bLhBLQg0IhJkUUoPVvP0Wx-GkQjC15mGkPQ758ub9COGbyhwSjN0W88jTwn7vdHUBm9b0zwQB6erzHJQKBN4zHtvDjMBhFQ"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Navratna Emerald Choker</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Heritage Collection</p>
+<p class="font-price-display text-price-display text-heritage-red">$4,250</p>
+</a>
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<img alt="Imperial Ruby Solitaire ring in antique gold with an oval ruby center stone" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4Q6D3N8k9sy0lvnpdwZbAal-Yc2nNoDvn1KWLpQ35YjeWH3kmeuCKzZ2Az70x23yA855-n1BJTZl5ZO5h-vjDb_o9pzj3yVhuPMtSAWip3tzz-9ZAqsj6yYClSGZPmVCrvMUWlHQQ0On__966QTzkUO-DVvD59vB-IZ8DzbY61DFtF_DJGfugTLIdmDyeGAsVK3kNraVKn4A4W16e3nlqK3IfGE1DKixEUPfTLjAdVEdEb7LQK778A"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Imperial Ruby Solitaire</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Royal Rings</p>
+<p class="font-price-display text-price-display text-heritage-red">$2,800</p>
+</a>
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<span class="absolute top-3 left-3 z-10 bg-heritage-red text-silk-cream text-[10px] px-3 py-1 uppercase tracking-widest">Limited Edition</span>
+<img alt="Chand Bali Jhumkas, silver crescent earrings with intricate filigree and pearl drops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA9b27F_Q7Uh43pUYHvqBH_FbHypAXiSFnUCknA0zYtKCepEclHnuXoFoUvihKJvFJCV5uBkC42zELpmYjyWUQJbW8OEZCJ2bxCnGqXarxfKVG1VOjSF2IOaoamYufHgvARfqsxqqUdisYbz7noYr8sYS_ogtXo4OdiRAHL08n6FYlHzUUZz1Nrmp9ivAiIK0ThKPo4LjbL84ooKt-ttxLExYboYJIQaYg93WyKgUpPnw5kUsdnrsHGQ"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Chand Bali Jhumkas</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Earrings</p>
+<p class="font-price-display text-price-display text-heritage-red">$1,150</p>
+</a>
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<img alt="Tribal Gold Stackable bangles, a set of three engraved gold bangles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDOjzcUXJyhr3xAJ6a92P7dwfqgHWitNGcDU4GjYkqTi4hjLFurFghvZmEEUwlZUcs-6q-TxeVeNTlQWykn8ofgf_gCpoQaoYUD37Y05C-BD-qHaIDoNE6tWLtUlXZwtgT6NZLtoQ2QXxjcqwQyz3t9utYuZgsU6tfiaIOmFfP9jh4BBw1BzQ9HviSwlRbyr_58jzrm6y7gIYziMfFKMM-bA9G71yAdi8dkWGCGym9mAvbz9JQ8BgATQ"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Tribal Gold Stackable</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Bangles</p>
+<p class="font-price-display text-price-display text-heritage-red">$3,400</p>
+</a>
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<img alt="Lotus Tourmaline Pendant, a carved pink tourmaline lotus flower on a gold chain" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4IhLjJpaB-PB69uYUC8AMBOS7D0Vy2JRM1NnKtt_yfga122rBk5NT_CnvC2c09kZmc8QZ_uxutkDoNVWDuRGblEfOV93aOe5sYa_CNEQ5p5DtnHjXQNJqFXwpel33eV092xoeZWRQbuQcXIOcl_i-uCUFs977MSi5mfnWIpbRo49ene5xN3ZAo88c_XHOj6HyHuyjnTR_WFIn_cjIQqyhSN55qct54kx8ezLsIE6NiqReOQEkiYkwTA"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Lotus Tourmaline Pendant</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Necklaces</p>
+<p class="font-price-display text-price-display text-heritage-red">$1,850</p>
+</a>
+<a class="group block" href="product.html">
+<div class="aspect-square overflow-hidden mb-4 relative bg-surface-container-low">
+<img alt="Polki Floral Studs, gold floral earrings set with uncut polki diamonds and emeralds" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAFIcJCwTFmsxQxpsIK3b-QSwLWmJf1nPrfoGCbONWWpRICI4jaR4Vd2-1iYfukcVqE5gZ5Scagoh7yhORQXfK3TxHXK2Llm9ZRASNqls1yOwrd_e92vmlQPGKAhu47_vXuqtLGERIYhCdviIYtw4ds7G7bLhBLQg0IhJkUUoPVvP0Wx-GkQjC15mGkPQ758ub9COGbyhwSjN0W88jTwn7vdHUBm9b0zwQB6erzHJQKBN4zHtvDjMBhFQ"/>
+</div>
+<h2 class="font-headline-md text-[15px] text-on-surface">Polki Floral Studs</h2>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mt-1 mb-1">Earrings</p>
+<p class="font-price-display text-price-display text-heritage-red">$5,600</p>
+</a>
+</div>
+<nav aria-label="Pagination" class="flex justify-center items-center gap-2 mt-16">
+<button aria-label="Previous page" class="min-w-[36px] min-h-[36px] flex items-center justify-center text-on-surface-variant hover:text-heritage-red disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-[18px]" aria-hidden="true">chevron_left</span>
+</button>
+<button aria-current="page" aria-label="Page 1" class="min-w-[36px] min-h-[36px] rounded-full bg-heritage-red text-silk-cream font-body-md text-body-md">1</button>
+<button aria-label="Page 2" class="min-w-[36px] min-h-[36px] font-body-md text-body-md hover:text-heritage-red">2</button>
+<button aria-label="Page 3" class="min-w-[36px] min-h-[36px] font-body-md text-body-md hover:text-heritage-red">3</button>
+<span aria-hidden="true" class="px-1">…</span>
+<button aria-label="Page 12" class="min-w-[36px] min-h-[36px] font-body-md text-body-md hover:text-heritage-red">12</button>
+<button aria-label="Next page" class="min-w-[36px] min-h-[36px] flex items-center justify-center text-on-surface-variant hover:text-heritage-red">
+<span class="material-symbols-outlined text-[18px]" aria-hidden="true">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-silk-cream dark:bg-charcoal-ink border-t border-antique-gold/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="text-headline-md font-headline-md text-heritage-red dark:text-primary-fixed">AMRAPALI</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant leading-relaxed">Honoring the rich heritage of Indian jewelry through timeless designs and masterful craftsmanship since 1978.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col space-y-3">
+<h3 class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed mb-2">CLIENT CARE</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="boutiques.html">Store Locator</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h3 class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed mb-2">COMPANY</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="about.html">Our Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold-text underline" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="mt-8 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">&copy; 2024 Amrapali Jewels. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/motion.js" defer=""></script>
+<script>
+        // ---- Mobile navigation drawer (shared pattern) ----
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const drawer = document.getElementById('mobile-drawer');
+        const drawerBackdrop = document.getElementById('mobile-drawer-backdrop');
+
+        function getFocusable(container) {
+            return Array.from(container.querySelectorAll('a[href], button:not([disabled])'));
+        }
+        function openDrawer() {
+            drawer.classList.remove('hidden');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', 'Close menu');
+            const focusable = getFocusable(drawer);
+            if (focusable.length) focusable[0].focus();
+            document.addEventListener('keydown', onDrawerKeydown);
+        }
+        function closeDrawer() {
+            drawer.classList.add('hidden');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open menu');
+            document.removeEventListener('keydown', onDrawerKeydown);
+            menuToggle.focus();
+        }
+        function onDrawerKeydown(e) {
+            if (e.key === 'Escape') { closeDrawer(); return; }
+            if (e.key === 'Tab') {
+                const focusable = getFocusable(drawer);
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+            }
+        }
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        drawerBackdrop.addEventListener('click', closeDrawer);
+
+        // ---- Motion ----
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.AmrapaliMotion) {
+                AmrapaliMotion.revealOnScroll('[data-reveal]');
+                AmrapaliMotion.revealGrid('#product-grid');
+            }
+        });
+    </script>
+</body></html>
