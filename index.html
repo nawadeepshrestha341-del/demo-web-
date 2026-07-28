@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMRAPALI | High-End Heritage Jewelry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-container": "#43423e",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#ff907f",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-primary": "#ffb4a8",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#2c2c28",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-container": "#fed488",
+                        "on-background": "#1c1b1b",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-container": "#8b0000",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "primary": "#610000",
+                        "antique-gold": "#B38B45",
+                        "antique-gold-text": "#8A6A2E",
+                        "surface-container-high": "#eae7e7",
+                        "charcoal-ink": "#121212",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#ffdad4",
+                        "outline-variant": "#e3beb8",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary": "#ffffff",
+                        "outline": "#8e706b",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#b52619",
+                        "tertiary-fixed": "#e5e2dc",
+                        "on-tertiary-container": "#b0aea9",
+                        "surface-variant": "#e5e2e1",
+                        "silk-cream": "#FDFBF7",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface-variant": "#5a403c",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#785a1a",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#410000",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#e9c176",
+                        "heritage-red": "#630D16",
+                        "secondary": "#775a19",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "price-display": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            },
+            plugins: [
+                function ({ addVariant }) {
+                    // Fires when a JS-toggled ".slide-active" class is present on an
+                    // ancestor, not just the element itself -- matches how the hero
+                    // slider marks the current slide on its wrapper div.
+                    addVariant('slide-active', ':merge(.slide-active) &');
+                }
+            ]
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #hero-slider, .slide-active\:opacity-100, .slide-active\:translate-y-0 {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-silk-cream text-on-surface selection:bg-antique-gold/20 selection:text-heritage-red overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-silk-cream/90 dark:bg-charcoal-ink/90 backdrop-blur-md border-b border-antique-gold/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-unit max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="text-headline-lg font-headline-lg tracking-widest text-heritage-red dark:text-primary-fixed" href="#">AMRAPALI</a>
+<!-- Navigation Links (desktop) -->
+<nav aria-label="Primary" class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed border-b border-antique-gold pb-1 cursor-pointer transition-colors duration-300" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="#">About Us</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="#">Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text transition-colors duration-300" href="#">Contact Us</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-2 md:space-x-4 text-heritage-red">
+<button type="button" aria-label="Search" class="min-w-[44px] min-h-[44px] flex items-center justify-center active:opacity-70 hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">search</span>
+</button>
+<button type="button" aria-label="Account" class="hidden sm:flex min-w-[44px] min-h-[44px] items-center justify-center active:opacity-70 hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">person</span>
+</button>
+<button type="button" aria-label="Wishlist" class="hidden sm:flex min-w-[44px] min-h-[44px] items-center justify-center active:opacity-70 hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+</button>
+<button type="button" aria-label="Cart, 0 items" class="relative min-w-[44px] min-h-[44px] flex items-center justify-center active:opacity-70 hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+<span aria-hidden="true" class="absolute top-1 right-1 bg-heritage-red text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">0</span>
+</button>
+<!-- Mobile menu toggle -->
+<button id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center active:opacity-70 hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-label="Site navigation">
+<div id="mobile-drawer-backdrop" class="absolute inset-0 bg-charcoal-ink/40"></div>
+<div class="absolute top-0 right-0 h-full w-4/5 max-w-xs bg-silk-cream shadow-xl flex flex-col p-8 overflow-y-auto">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-heritage-red">Menu</span>
+<button id="mobile-menu-close" type="button" aria-label="Close menu" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-heritage-red hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+</div>
+<nav aria-label="Mobile" class="flex flex-col space-y-8">
+<a class="font-label-caps text-label-caps text-heritage-red border-b border-antique-gold pb-1 w-fit" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="#">About Us</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="#">Boutiques</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-antique-gold-text transition-colors" href="#">Contact Us</a>
+</nav>
+</div>
+</div>
+
+<main class="pt-16">
+<!-- Hero Section Slider -->
+<section class="relative h-[90vh] overflow-hidden group">
+<div class="flex transition-transform duration-1000 ease-in-out h-full w-[400%]" id="hero-slider">
+<!-- Slide 1 -->
+<div class="relative w-1/4 h-full">
+<div class="absolute inset-0 bg-black/20 z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] group-hover:scale-105" role="img" aria-label="A grand cinematic wide shot of a high-end luxury jewelry showroom inspired by Indian heritage, featuring a model wearing a majestic gold and ruby necklace from the Rang Mahal collection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDP0MhQp71ycsAo9tDOzWTWfkOrI-R9iojCPLXKKP6F1r0MeRDmXxC2kTswlD5JPcHcTJ5xQfDA-xn3jcA-CjcIOuVmx6rsq3Bwm6BBTtwljvPrn2MQhuGtOIKTLz5Z4x0tPaJTx9MybZPlnkOWUFHQxOdFvCGVjhfz2jhK_g-85KnlZ9vR-P6aP-GMEmeX5aSIK4vAPMrYdjdocsXaCBC2Bz0AMLitSNQCLXLSr5Uk7P5Rm0l1FfDbug')"></div>
+<div class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-6">
+<span class="font-label-caps text-label-caps text-silk-cream tracking-[0.3em] mb-4 opacity-0 translate-y-4 transition-all duration-700 delay-300 slide-active:opacity-100 slide-active:translate-y-0">THE RANG MAHAL COLLECTION</span>
+<h1 class="font-display-lg text-display-lg text-silk-cream mb-8 opacity-0 translate-y-4 transition-all duration-700 delay-500 slide-active:opacity-100 slide-active:translate-y-0">Majestic Red Heritage</h1>
+<button class="bg-heritage-red text-silk-cream px-10 py-4 font-label-caps text-label-caps hover:bg-antique-gold transition-colors duration-500 opacity-0 translate-y-4 transition-all duration-700 delay-700 slide-active:opacity-100 slide-active:translate-y-0 uppercase tracking-widest">Discover More</button>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="w-1/4 h-full bg-slate-100">
+<div class="w-full h-full bg-cover bg-center" role="img" aria-label="Close up photography of exquisite turquoise and silver carved earrings from the Sarovar collection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYKTAgvCuL7KAvVP1jMseY5s2VG2vZuDACJcSkDzguMt5SiOP6ck57OZECkwG_RglL7fSBnwjOoC9U-ORASyPaRwn12le6ISBNG9PWYxOscI-gx1cpKqxyPpxyVIq-PG8-MUrveEMchaT00GrxRoU0PsDEmVo0EnLaFfR5zA9UjG4WMTSZL2MzOs0WokERZCod4D9rAYc2KvhpGAOsDaiiuK_ES9Eb7YoyiimDA6RjUohHwUEaemuW2Q')"></div>
+</div>
+<!-- Slide 3 -->
+<div class="w-1/4 h-full bg-slate-200">
+<div class="w-full h-full bg-cover bg-center" role="img" aria-label="A vertical editorial fashion shot of delicate floral-inspired diamond bracelets from the Blossom collection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzbNldOpl71f1SBtEOM7yA_KUN8dGem5M67Mv1E_Vkem2dZ40wAQOrOju_46HjNJSa1RkLpPWQyLvw2qhT8b48FFvdbEaH3B8m8sfOSvkOy_JIK45-JMVB3irUnCLq-4Jaf6UW3LnDDOnnvNO_LSQbFHilYfanz1xsJjbXTL4k1fg4EEOa2cNrk6jt7bfS0rSfmqDjfsQqpIPX3xorK2sS0XhufvuFu9EtP98qnTNtUGzX6QmzeaGWFA')"></div>
+</div>
+<!-- Slide 4 -->
+<div class="w-1/4 h-full bg-slate-300">
+<div class="w-full h-full bg-cover bg-center" role="img" aria-label="A luxury jewelry display showcasing a thick gold cuff with intricate hand-engraved patterns." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDOjzcUXJyhr3xAJ6a92P7dwfqgHWitNGcDU4GjYkqTi4hjLFurFghvZmEEUwlZUcs-6q-TxeVeNTlQWykn8ofgf_gCpoQaoYUD37Y05C-BD-qHaIDoNE6tWLtUlXZwtgT6NZLtoQ2QXxjcqwQyz3t9utYuZgsU6tfiaIOmFfP9jh4BBw1BzQ9HviSwlRbyr_58jzrm6y7gIYziMfFKMM-bA9G71yAdi8dkWGCGym9mAvbz9JQ8BgATQ')"></div>
+</div>
+</div>
+<!-- Slider Navigation -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
+<div class="flex space-x-3" role="tablist" aria-label="Hero slides">
+<button class="slider-dot w-2 h-2 rounded-full border border-silk-cream bg-silk-cream transition-all duration-300" role="tab" aria-selected="true" aria-label="Slide 1 of 4" onclick="goToSlide(0)"></button>
+<button class="slider-dot w-2 h-2 rounded-full border border-silk-cream bg-transparent transition-all duration-300" role="tab" aria-selected="false" aria-label="Slide 2 of 4" onclick="goToSlide(1)"></button>
+<button class="slider-dot w-2 h-2 rounded-full border border-silk-cream bg-transparent transition-all duration-300" role="tab" aria-selected="false" aria-label="Slide 3 of 4" onclick="goToSlide(2)"></button>
+<button class="slider-dot w-2 h-2 rounded-full border border-silk-cream bg-transparent transition-all duration-300" role="tab" aria-selected="false" aria-label="Slide 4 of 4" onclick="goToSlide(3)"></button>
+</div>
+<button id="hero-pause-toggle" type="button" aria-label="Pause slideshow" class="min-w-[32px] min-h-[32px] flex items-center justify-center text-silk-cream hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true" id="hero-pause-icon">pause</span>
+</button>
+</div>
+</section>
+<!-- Featured Collections Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-heritage-red mb-2">Iconic Collections</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Discover the artistry of our master craftsmen through our most celebrated curated series.</p>
+</div>
+<a class="font-label-caps text-label-caps text-heritage-red border-b border-antique-gold pb-1 hover:text-antique-gold-text transition-colors" href="#">VIEW ALL COLLECTIONS</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Rang Mahal -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" alt="Detailed product shot of heavy heritage earrings featuring kundan work and deep red rubies, set against a dark textured background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIcJCwTFmsxQxpsIK3b-QSwLWmJf1nPrfoGCbONWWpRICI4jaR4Vd2-1iYfukcVqE5gZ5Scagoh7yhORQXfK3TxHXK2Llm9ZRASNqls1yOwrd_e92vmlQPGKAhu47_vXuqtLGERIYhCdviIYtw4ds7G7bLhBLQg0IhJkUUoPVvP0Wx-GkQjC15mGkPQ758ub9COGbyhwSjN0W88jTwn7vdHUBm9b0zwQB6erzHJQKBN4zHtvDjMBhFQ"/>
+<div class="absolute inset-0 bg-heritage-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+<span class="bg-silk-cream/90 backdrop-blur px-8 py-3 font-label-caps text-label-caps text-heritage-red tracking-widest shadow-sm">RANG MAHAL</span>
+</div>
+</div>
+</div>
+<!-- Sarovar -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" alt="Elegant carved turquoise and silver jewelry set displayed on a cool grey marble surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4Q6D3N8k9sy0lvnpdwZbAal-Yc2nNoDvn1KWLpQ35YjeWH3kmeuCKzZ2Az70x23yA855-n1BJTZl5ZO5h-vjDb_o9pzj3yVhuPMtSAWip3tzz-9ZAqsj6yYClSGZPmVCrvMUWlHQQ0On__966QTzkUO-DVvD59vB-IZ8DzbY61DFtF_DJGfugTLIdmDyeGAsVK3kNraVKn4A4W16e3nlqK3IfGE1DKixEUPfTLjAdVEdEb7LQK778A"/>
+<div class="absolute inset-0 bg-antique-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+<span class="bg-silk-cream/90 backdrop-blur px-8 py-3 font-label-caps text-label-caps text-heritage-red tracking-widest shadow-sm">SAROVAR</span>
+</div>
+</div>
+</div>
+<!-- Blossom -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" alt="Lightweight floral gold earrings with tiny diamond accents, draped over a soft pink velvet pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA9b27F_Q7Uh43pUYHvqBH_FbHypAXiSFnUCknA0zYtKCepEclHnuXoFoUvihKJvFJCV5uBkC42zELpmYjyWUQJbW8OEZCJ2bxCnGqXarxfKVG1VOjSF2IOaoamYufHgvARfqsxqqUdisYbz7noYr8sYS_ogtXo4OdiRAHL08n6FYlHzUUZz1Nrmp9ivAiIK0ThKPo4LjbL84ooKt-ttxLExYboYJIQaYg93WyKgUpPnw5kUsdnrsHGQ"/>
+<div class="absolute inset-0 bg-heritage-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+<span class="bg-silk-cream/90 backdrop-blur px-8 py-3 font-label-caps text-label-caps text-heritage-red tracking-widest shadow-sm">BLOSSOM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Explorer -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-heritage-red mb-12">Shop by Category</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Rings</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Necklaces</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Pendants</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Earrings</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Bracelets</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+<a class="group flex flex-col space-y-2" href="#">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-antique-gold-text transition-colors">Bangles</span>
+<div class="w-0 h-px bg-antique-gold group-hover:w-full transition-all duration-500"></div>
+</a>
+</div>
+<button class="mt-16 border border-heritage-red text-heritage-red px-12 py-4 font-label-caps text-label-caps hover:bg-heritage-red hover:text-silk-cream transition-all duration-500 uppercase tracking-widest">Explore Catalog</button>
+</div>
+<div class="relative">
+<div class="aspect-square bg-white border border-antique-gold/20 p-8 shadow-sm">
+<img class="w-full h-full object-cover" loading="lazy" alt="A curated collection of diverse jewelry pieces — a ring, a necklace, and a bracelet — arranged artistically on a minimalist white stone platter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4IhLjJpaB-PB69uYUC8AMBOS7D0Vy2JRM1NnKtt_yfga122rBk5NT_CnvC2c09kZmc8QZ_uxutkDoNVWDuRGblEfOV93aOe5sYa_CNEQ5p5DtnHjXQNJqFXwpel33eV092xoeZWRQbuQcXIOcl_i-uCUFs977MSi5mfnWIpbRo49ene5xN3ZAo88c_XHOj6HyHuyjnTR_WFIn_cjIQqyhSN55qct54kx8ezLsIE6NiqReOQEkiYkwTA"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border border-antique-gold/30 -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Editorial -->
+<section class="py-32 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center">
+<div class="max-w-2xl mx-auto">
+<span class="font-label-caps text-label-caps text-antique-gold-text tracking-[0.2em] mb-4 block">NEWSLETTER</span>
+<h2 class="font-headline-lg text-headline-lg text-heritage-red mb-8">Join the Inner Circle</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Subscribe to receive updates on new collections, exclusive invitations to private viewings, and stories from our atelier.</p>
+<form id="newsletter-form" class="flex flex-col md:flex-row gap-4" novalidate="">
+<div class="flex-1 text-left">
+<label for="newsletter-email" class="sr-only">Email Address</label>
+<input id="newsletter-email" name="email" class="w-full bg-transparent border-t-0 border-x-0 border-b border-antique-gold/50 focus:ring-0 focus:border-heritage-red font-body-md text-body-md py-4" placeholder="Your Email Address" type="email" required=""/>
+</div>
+<button class="bg-heritage-red text-silk-cream px-12 py-4 font-label-caps text-label-caps hover:bg-charcoal-ink transition-colors duration-500 uppercase tracking-widest whitespace-nowrap" type="submit">Subscribe</button>
+</form>
+<p id="newsletter-feedback" role="alert" aria-live="polite" class="mt-4 font-body-md text-body-md"></p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-silk-cream dark:bg-charcoal-ink border-t border-antique-gold/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Brand & Info -->
+<div class="space-y-6">
+<div class="text-headline-md font-headline-md text-heritage-red dark:text-primary-fixed">AMRAPALI</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant leading-relaxed">
+                    Honoring the rich heritage of Indian jewelry through timeless designs and masterful craftsmanship since 1978. Each piece is a testament to our heritage and commitment to timeless beauty.
+                </p>
+<div class="flex space-x-2">
+<button type="button" aria-label="Share" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold-text text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">share</span>
+</button>
+<button type="button" aria-label="Store locator" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold-text text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+</button>
+<button type="button" aria-label="Email us" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-antique-gold-text text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined" aria-hidden="true">mail</span>
+</button>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col space-y-3">
+<h3 class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed mb-2">QUICK LINKS</h3>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h3 class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed mb-2">ABOUT</h3>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Our Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-antique-gold-text underline transition-all cursor-pointer" href="#">Store Locator</a>
+</div>
+</div>
+<!-- Bottom Note & Payment -->
+<div class="flex flex-col justify-between items-start md:items-end">
+<div class="text-right hidden md:block">
+<h3 class="font-label-caps text-label-caps text-heritage-red dark:text-primary-fixed mb-4">ACCEPTED PAYMENTS</h3>
+<div class="flex space-x-4 opacity-60" aria-hidden="true">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+</div>
+<div class="mt-8 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">&copy; 2024 Amrapali Jewels. All Rights Reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button type="button" aria-label="Chat with us" class="fixed bottom-8 right-8 bg-heritage-red text-silk-cream w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-antique-gold transition-all duration-300 z-50 group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">chat_bubble</span>
+</button>
+<script>
+        // ---- Hero slider ----
+        let currentSlide = 0;
+        let autoplayTimer = null;
+        let isPaused = false;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const slider = document.getElementById('hero-slider');
+        const dots = document.querySelectorAll('.slider-dot');
+        const slides = slider.children;
+        const pauseToggle = document.getElementById('hero-pause-toggle');
+        const pauseIcon = document.getElementById('hero-pause-icon');
+
+        function updateSlideVisibility() {
+            Array.from(slides).forEach((slide, index) => {
+                slide.classList.toggle('slide-active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            slider.style.transform = `translateX(-${currentSlide * 25}%)`;
+            dots.forEach((dot, i) => {
+                const active = i === currentSlide;
+                dot.classList.toggle('bg-silk-cream', active);
+                dot.classList.toggle('bg-transparent', !active);
+                dot.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            updateSlideVisibility();
+        }
+
+        function startAutoplay() {
+            if (prefersReducedMotion || isPaused) return;
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+                goToSlide((currentSlide + 1) % slides.length);
+            }, 8000);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function setPaused(paused) {
+            isPaused = paused;
+            pauseIcon.textContent = paused ? 'play_arrow' : 'pause';
+            pauseToggle.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+            if (paused) {
+                stopAutoplay();
+            } else {
+                startAutoplay();
+            }
+        }
+
+        pauseToggle.addEventListener('click', () => setPaused(!isPaused));
+
+        const heroSection = slider.closest('section');
+        heroSection.addEventListener('mouseenter', stopAutoplay);
+        heroSection.addEventListener('mouseleave', () => { if (!isPaused) startAutoplay(); });
+        heroSection.addEventListener('focusin', stopAutoplay);
+        heroSection.addEventListener('focusout', () => { if (!isPaused) startAutoplay(); });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateSlideVisibility();
+            if (prefersReducedMotion) {
+                setPaused(true);
+            } else {
+                startAutoplay();
+            }
+        });
+
+        // ---- Mobile navigation drawer ----
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const drawer = document.getElementById('mobile-drawer');
+        const drawerBackdrop = document.getElementById('mobile-drawer-backdrop');
+
+        function getFocusable(container) {
+            return Array.from(container.querySelectorAll('a[href], button:not([disabled])'));
+        }
+
+        function openDrawer() {
+            drawer.classList.remove('hidden');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', 'Close menu');
+            const focusable = getFocusable(drawer);
+            if (focusable.length) focusable[0].focus();
+            document.addEventListener('keydown', onDrawerKeydown);
+        }
+
+        function closeDrawer() {
+            drawer.classList.add('hidden');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open menu');
+            document.removeEventListener('keydown', onDrawerKeydown);
+            menuToggle.focus();
+        }
+
+        function onDrawerKeydown(e) {
+            if (e.key === 'Escape') {
+                closeDrawer();
+                return;
+            }
+            if (e.key === 'Tab') {
+                const focusable = getFocusable(drawer);
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        drawerBackdrop.addEventListener('click', closeDrawer);
+
+        // ---- Newsletter form ----
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterFeedback = document.getElementById('newsletter-feedback');
+        const newsletterEmail = document.getElementById('newsletter-email');
+
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const value = newsletterEmail.value.trim();
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            if (!isValid) {
+                newsletterFeedback.textContent = 'Please enter a valid email address.';
+                newsletterFeedback.classList.remove('text-heritage-red');
+                newsletterFeedback.classList.add('text-error');
+                return;
+            }
+            newsletterFeedback.textContent = "You're in. Watch your inbox for exclusive previews.";
+            newsletterFeedback.classList.remove('text-error');
+            newsletterFeedback.classList.add('text-heritage-red');
+            newsletterForm.reset();
+        });
+    </script>
+</body></html>
